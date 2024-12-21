@@ -1,3 +1,4 @@
+-- DDL for df_orders table creation in MS SQL Server Management studio
 create table df_orders(
 	[order_id] int primary key
 	, [order_date] date
@@ -18,7 +19,7 @@ create table df_orders(
 );
 
 
-
+-- Metrics
 -- top 10 highest revenue generating products
 
 select top 10 product_id, sum(sale_price) as revenue
@@ -29,8 +30,6 @@ order by revenue desc;
 
 
 -- top 5 highest selling products in each region;
-
-
 
 with cte as (
 select 
